@@ -4,53 +4,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Mostrar informació d'un curs</title>
-    <!--<link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.css"/>-->
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="funcio.js">
+    <link rel="stylesheet" href="estils.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="funcio.js"></script>
 </head>
 <body>
-    <div align="center" class="form-group">
+    <div align="center" class="form-control">
         <form method="get" id="form" onsubmit="return fila()" class="form"><!--Estructura del formulari-->
             <div>
                 <h3 class="titol">Consulta informació sobre un curs</h3>
             </div>
             <div>
-                <label for="nomcurs" class="etiqueta">Nom del curs</label>
+                <label for="nomcurs">Nom del curs</label>
             </div>
             <div>
-            <input type="text" id="nomcurs" placeholder="Programació orientada a objectes" required  maxlength="175">
+            <input type="text" id="nomcurs" class="form-group" placeholder="Programació orientada a objectes" size="30" required  maxlength="175">
             </div>
             <div>
-                <label for="tipuscurs" class="etiqueta">Tipus del curs</label>
+                <label for="tipuscurs">Tipus del curs</label>
             </div>
             <div>
-                <input type="text" id="tipuscurs" placeholder="Informàtica" required class="dins">
+                <input type="text" id="tipuscurs" class="form-group" placeholder="Informàtica" size="8" required>
             </div>
             <div>
-                <label for="professor" class="etiqueta">Nom del professor</label>
+                <label for="professor">Nom del professor</label>
             </div>
             <div>
-                <input type="text" id="professor" placeholder="Primer i segon cognom" required class="dins">
+                <input type="text" id="professor" class="form-group" placeholder="Primer i segon cognom" size="19" required>
             </div>
             <div>
-                <label for="datainici" class="etiqueta">Data inici</label>
+                <label for="datainici">Data inici</label>
             </div>
             <div>
-                <input type="date" id="datainici" required class="dins">
+                <input type="date" id="datainici" class="form-group" required>
             </div>
             <div>
-                <label for="datafi" class="etiqueta">Data fi</label>
+                <label for="datafi">Data fi</label>
             </div>
             <div>
-                <input type="date" id="datafi" placeholder="Ha de ser major que la data inicial" required class="dins">
+                <input type="date" id="datafi" class="form-group" placeholder="Ha de ser major que la data inicial" required>
             </div>
             <div>
-                <label for="hores" class="etiqueta">Nombre d'hores del curs</label>
+                <label for="hores">Nombre d'hores del curs</label>
             </div>
             <div>
-               <input type="number" id="hores" min="1" max="999" required class="dins">
+               <input type="number" id="hores" class="form-group" min="1" max="999" required >
             </div><br>
             <div>
                 <span>
@@ -67,10 +67,10 @@
                     var novafila = ('El nom del curs és '+$('#nomcurs').val()+
                         '\nLa seva tipologia és'+$("#tipuscurs").val()+
                         '\nEl professor que ho imparteix és '+$("#professor").val()+
-                        '\nEl curs comença el '+$("#datainici").val()+
-                        'i acaba el '+$("#datafi").val()+
-                        +'\nFalten '+diferencia()+' dies per a que acabi el curs'+
-                        "\nEl nombre total d'hores del curs és "+$('#hores').val());
+                        '\n El curs comença el '+$("#datainici").val()+
+                        ' i acaba el '+$("#datafi").val()+
+                        +'\n Falten '+diferencia()+' dies per a que acabi el curs'+
+                        "\n El nombre total d'hores del curs és "+$('#hores').val());
                     alert (novafila);
                 
             return null;
