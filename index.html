@@ -1,0 +1,81 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mostrar informació d'un curs</title>
+    <!--<link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.css"/>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="funcio.js">
+    <script src="funcio.js"></script>
+</head>
+<body>
+    <div align="center" class="form-group">
+        <form method="get" id="form" onsubmit="return fila()" class="form"><!--Estructura del formulari-->
+            <div>
+                <h3 class="titol">Consulta informació sobre un curs</h3>
+            </div>
+            <div>
+                <label for="nomcurs" class="etiqueta">Nom del curs</label>
+            </div>
+            <div>
+            <input type="text" id="nomcurs" placeholder="Programació orientada a objectes" required  maxlength="175">
+            </div>
+            <div>
+                <label for="tipuscurs" class="etiqueta">Tipus del curs</label>
+            </div>
+            <div>
+                <input type="text" id="tipuscurs" placeholder="Informàtica" required class="dins">
+            </div>
+            <div>
+                <label for="professor" class="etiqueta">Nom del professor</label>
+            </div>
+            <div>
+                <input type="text" id="professor" placeholder="Primer i segon cognom" required class="dins">
+            </div>
+            <div>
+                <label for="datainici" class="etiqueta">Data inici</label>
+            </div>
+            <div>
+                <input type="date" id="datainici" required class="dins">
+            </div>
+            <div>
+                <label for="datafi" class="etiqueta">Data fi</label>
+            </div>
+            <div>
+                <input type="date" id="datafi" placeholder="Ha de ser major que la data inicial" required class="dins">
+            </div>
+            <div>
+                <label for="hores" class="etiqueta">Nombre d'hores del curs</label>
+            </div>
+            <div>
+               <input type="number" id="hores" min="1" max="999" required class="dins">
+            </div><br>
+            <div>
+                <span>
+                    <input type="submit" class="boto" value="Consultar"><!--botó que llança la funció de consutla d'haver omplit el formulari-->
+                </span>
+            </div>
+        </form>
+    </div>
+
+    <script>
+            
+            function fila(){
+                if (datafinal()==true){
+                    var novafila = ('El nom del curs és '+$('#nomcurs').val()+
+                        '\nLa seva tipologia és'+$("#tipuscurs").val()+
+                        '\nEl professor que ho imparteix és '+$("#professor").val()+
+                        '\nEl curs comença el '+$("#datainici").val()+
+                        'i acaba el '+$("#datafi").val()+
+                        +'\nFalten '+diferencia()+' dies per a que acabi el curs'+
+                        "\nEl nombre total d'hores del curs és "+$('#hores').val());
+                    alert (novafila);
+                
+            return null;
+                }
+            }
+    </script>
+</body>
+</html>
