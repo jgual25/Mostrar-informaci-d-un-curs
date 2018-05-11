@@ -1,11 +1,21 @@
 label{
     font-family: 'Times New Roman', Times, serif;
     font-style: italic;
-    color: silver;
     font-size: larger;
+    color: darkgreen;
 
 }
 input{
     color: forestgreen;
-    border-color: navy;
+    border-color: darkcyan;
+}
+div{
+    background-color: yellowgreen;
+}
+form{
+    width: 80%;
+    border: 5px groove darkcyan;
+}
+.fons{
+    background-color: burlywood;
 }

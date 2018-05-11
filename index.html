@@ -12,7 +12,7 @@
 </head>
 <body>
     <div align="center" class="form-control">
-        <form method="get" id="form" onsubmit="return fila()" class="form"><!--Estructura del formulari-->
+        <form role="form" method="get" id="form" onsubmit="return fila()" class="form"><!--Estructura del formulari-->
             <div>
                 <h3 class="titol">Consulta informació sobre un curs</h3>
             </div>
@@ -51,7 +51,7 @@
             </div>
             <div>
                <input type="number" id="hores" class="form-group" min="1" max="999" required >
-            </div><br>
+            </div>
             <div>
                 <span>
                     <input type="submit" class="boto" value="Consultar"><!--botó que llança la funció de consutla d'haver omplit el formulari-->
@@ -69,7 +69,7 @@
                         '\nEl professor que ho imparteix és '+$("#professor").val()+
                         '\n El curs comença el '+$("#datainici").val()+
                         ' i acaba el '+$("#datafi").val()+
-                        +'\n Falten '+diferencia()+' dies per a que acabi el curs'+
+                        '\n Falten '+diferencia()+' dies per a que acabi el curs'+
                         "\n El nombre total d'hores del curs és "+$('#hores').val());
                     alert (novafila);
                 
